@@ -1,5 +1,4 @@
 build/
-src/
 
 # 配置文件
 *.vscode/
