@@ -12,6 +12,7 @@ endif()
 list(APPEND ZEPHYR_EXTRA_MODULES
     ${CMAKE_CURRENT_LIST_DIR}/algo
     ${CMAKE_CURRENT_LIST_DIR}/ramenx
+    ${CMAKE_CURRENT_LIST_DIR}/breeze-modules
 )
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})

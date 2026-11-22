@@ -5,3 +5,6 @@
 	path = algo
 	url = git@github.com:RobotPilots-SZU/algo.git
 	branch = template-matrix
+[submodule "breeze-modules"]
+	path = breeze-modules
+	url = git@github.com:River-zzZ25/breeze-modules.git
