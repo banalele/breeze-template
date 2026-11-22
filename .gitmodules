@@ -1,3 +1,7 @@
 [submodule "ramenx"]
 	path = ramenx
 	url = git@github.com:RobotPilots-SZU/ramenx.git
+[submodule "algo"]
+	path = algo
+	url = git@github.com:RobotPilots-SZU/algo.git
+	branch = template-matrix
