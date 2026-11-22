@@ -7,9 +7,12 @@ else()
     message("Use BOARD: ${BOARD}")
 endif()
 
-# 把同目录下的 algo 注册为 Zephyr 模块（algo/zephyr/module.yml）
+# 把同目录下的 algo / ramenx 注册为 Zephyr 模块（各自的 zephyr/module.yml）
 # 注意：必须在 find_package(Zephyr) 之前
-list(APPEND ZEPHYR_EXTRA_MODULES ${CMAKE_CURRENT_LIST_DIR}/algo)
+list(APPEND ZEPHYR_EXTRA_MODULES
+    ${CMAKE_CURRENT_LIST_DIR}/algo
+    ${CMAKE_CURRENT_LIST_DIR}/ramenx
+)
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 
@@ -44,3 +47,4 @@ target_include_directories(app PRIVATE
     src/ConfigLayer                 # 配置层头文件（如 rp_device_config.h）
 )
 
+target_link_libraries(app PRIVATE ramenx)

@@ -4,6 +4,3 @@ build/
 *.vscode/
 *.code-workspace
 *.cfg
-
-drivers/
-Infantry/
