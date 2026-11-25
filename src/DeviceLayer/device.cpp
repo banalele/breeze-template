@@ -1,5 +1,6 @@
 #include <zephyr/logging/log.h>
 #include "device.hpp"
+#include "device_motor.hpp"
 LOG_MODULE_REGISTER(device, LOG_LEVEL_INF);
 
 //------------------------------获取设备节点---------------------------------------
@@ -16,6 +17,13 @@ int Device_Init(void)
     if (ret != 0)
     {
         LOG_ERR("IWDG_Init failed with error code: %d", ret);
+        return ret;
+    }
+
+    ret = Motor_Init();
+    if (ret != 0)
+    {
+        LOG_ERR("Motor_Init failed with error code: %d", ret);
         return ret;
     }
 

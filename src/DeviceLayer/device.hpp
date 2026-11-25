@@ -1,6 +1,7 @@
 #pragma once
 #include "rtt.h"
 #include "iwdg.h"
+#include "device_motor.hpp"
 
 int Device_Init(void);
 
